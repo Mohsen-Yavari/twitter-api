@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Sidbar from "../components/Sidbar";
+import Feed from "../components/Feed";
 
 
 export default function Home() {
@@ -11,12 +12,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main className="flex min-h-screen max-w-7xl mx-auto ">
           {/* slider */}
           <Sidbar />
 
           {/* feed */}
-
+          <Feed />
           {/* widgest */}
 
 
