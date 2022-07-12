@@ -5,7 +5,7 @@ import { BellIcon,BookmarkIcon, DotsCircleHorizontalIcon, HashtagIcon, HomeIcon,
 
 export default function Sidbar() {
   return (
-    <div className="hidden sm:flex flex-col p-2 xl:items-start fixed h-full">
+    <div className="hidden sm:flex flex-col p-2 xl:items-start fixed h-full xl:mr-24">
         {/* twitter logo */}
 
         <div className="hoverEffect p-0 hover:bg-blue-100 xl:px-1">
