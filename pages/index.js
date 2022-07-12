@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Sidbar from "../components/Sidbar";
 import Feed from "../components/Feed";
+import Wedgets from '../components/Wedgets';
 
 
 export default function Home() {
@@ -18,7 +19,9 @@ export default function Home() {
 
           {/* feed */}
           <Feed />
+
           {/* widgest */}
+          <Wedgets />
 
 
           {/* model */}
