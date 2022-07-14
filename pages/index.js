@@ -43,6 +43,13 @@ export async function getServerSideProps() {
     "https://saurav.tech/NewsAPI/top-headlines/category/business/us.json"
   ).then((res) => res.json());
 
+
+  //how to hollow sections
+
+  const randomUserss = await fetch(
+    "https://randomuser.me/api/?results=30&inc=name,login,picture"
+  )
+
   
 
   return {

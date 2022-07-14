@@ -19,7 +19,7 @@ export default function Wedgets({newsResults}) {
       {newsResults.slice(0,articleNumber).map((article)=>(
         <News key={article.tittle} article={article} />
       ))}
-      <button className="text-blue-300 pr-3 pb-3 hover:text-blue-400">بیشتر</button>
+      <button onClick={() =>setArticleNumber(articleNumber + 3)} className="text-blue-300 pr-3 pb-3 hover:text-blue-400">بیشتر</button>
       </div>
      
     </div>
