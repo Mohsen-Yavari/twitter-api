@@ -4,7 +4,7 @@ import Feed from "../components/Feed";
 import Wedgets from '../components/Wedgets';
 
 
-export default function Home({newsResults}) {
+export default function Home({newsResults,randomUsersResult}) {
   return (
     <div >
       <Head>
@@ -21,7 +21,7 @@ export default function Home({newsResults}) {
           <Feed />
 
           {/* widgest */}
-          <Wedgets newsResults={newsResults.articles} />
+          <Wedgets newsResults={newsResults.articles} randomUsersResult={randomUsersResult.results} />
 
 
           {/* model */}
@@ -46,15 +46,16 @@ export async function getServerSideProps() {
 
   //how to hollow sections
 
-  const randomUserss = await fetch(
+  const randomUsersResult = await fetch(
     "https://randomuser.me/api/?results=30&inc=name,login,picture"
   )
-
+.then((res) => res.json());
   
 
   return {
     props: {
       newsResults,
+      randomUsersResult
       
     },
   };
